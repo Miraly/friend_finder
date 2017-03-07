@@ -1,0 +1,1 @@
+{"name":"friend1","photo":"friend 1 photo","avg":["2","3","3","","","","","","",""]}

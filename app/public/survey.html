@@ -7,10 +7,7 @@
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&effect=emboss|Montserrat:100" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="../../server.js"></script>	
-	<script src="../routing/htmlRoutes.js"></script>
-	<script src="../routing/apiRoutes.js"></script>	
-	<script src="../data/friends.js"></script>
+	
 </head>
 <body>
 	<div class="row" id="background">
@@ -160,4 +157,29 @@
 
 	
 </body>
+<script>
+	$(document).ready(function() {
+    console.log( "ready!" );
+ var newFriend;
+ $('.submit').click(function(event){
+ 	event.preventDefault();
+ 	var total = 0;
+ 	var avg = [$('#q1').val().trim(), $('#q2').val().trim(), $('#q3').val().trim(), $('#q4').val().trim(), $('#q5').val().trim(), $('#q6').val().trim(), $('#q7').val().trim(), $('#q8').val().trim(), $('#q9').val().trim(), $('#q10').val().trim(),];
+ 		
+
+	 newFriend = {
+    		name: $('#name').val().trim(),
+    		photo: $('#photo').val().trim(),
+    	   	avg: avg
+	    },
+	  
+	
+	 console.log(newFriend);
+	 $.post("/new_friend", newFriend).done(function(data) {
+
+		});
+ }); 
+  
+});
+</script>
 </html>
