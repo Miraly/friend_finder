@@ -7,6 +7,7 @@
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&effect=emboss|Montserrat:100" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="friends.js"></script>
 	
 </head>
 <body>
@@ -16,7 +17,7 @@
 					<h3 class="font-effect-emboss">Answer the questions</h3>
 					<h5 style="text-align: center">Where 1 - strongly agree and 5 - strongly disagree</h5>
 			</div>
-			<form class="col-md-8 col-md-offset-2 survey" action="/submit" method="GET">
+			<form class="col-md-8 col-md-offset-2 survey">
 				<div class="row margin-top">
 					<label for="name" class="col-sm-4 control-label">Your name</label>
 					<div class="col-sm-8">
@@ -35,7 +36,7 @@
 						<select class="form-control" id="q1">
 						  <option>1</option>
 						  <option>2</option>
-						  <option>3</option>
+						  <option selected>3</option>
 						  <option>4</option>
 						  <option>5</option>
 						</select>
@@ -47,7 +48,7 @@
 						<select class="form-control" id="q2">
 						  <option>1</option>
 						  <option>2</option>
-						  <option>3</option>
+						  <option selected>3</option>
 						  <option>4</option>
 						  <option>5</option>
 						</select>
@@ -56,10 +57,10 @@
 				<div class="row margin-top">
 					<label for="q3" class="col-sm-10 control-label">You find it easy to stay relaxed and focused even when there is some pressure.</label>
 					<div class="col-sm-2">
-						<select class="form-control" id="q3">
+						<select class="form-control" id="q3" value="1">
 						  <option>1</option>
 						  <option>2</option>
-						  <option>3</option>
+						  <option selected>3</option>
 						  <option>4</option>
 						  <option>5</option>
 						</select>
@@ -67,11 +68,11 @@
 				</div>
 				<div class="row margin-top">
 					<label for="q4" class="col-sm-10 control-label">You rarely do something just out of sheer curiosity.</label>
-					<div class="col-sm-2" id="q4">
-						<select class="form-control">
+					<div class="col-sm-2">
+						<select class="form-control" id="q4">
 						  <option>1</option>
 						  <option>2</option>
-						  <option>3</option>
+						  <option selected>3</option>
 						  <option>4</option>
 						  <option>5</option>
 						</select>
@@ -79,11 +80,11 @@
 				</div>
 				<div class="row margin-top">
 					<label for="q5" class="col-sm-10 control-label">People can rarely upset you.</label>
-					<div class="col-sm-2" id="q5">
-						<select class="form-control">
+					<div class="col-sm-2">
+						<select class="form-control" id="q5">
 						  <option>1</option>
 						  <option>2</option>
-						  <option>3</option>
+						  <option selected>3</option>
 						  <option>4</option>
 						  <option>5</option>
 						</select>
@@ -91,11 +92,11 @@
 				</div>
 				<div class="row margin-top">
 					<label for="q6" class="col-sm-10 control-label">It is often difficult for you to relate to other people’s feelings.</label>
-					<div class="col-sm-2" id="q6">
-						<select class="form-control">
+					<div class="col-sm-2">
+						<select class="form-control" id="q6">
 						  <option>1</option>
 						  <option>2</option>
-						  <option>3</option>
+						  <option selected>3</option>
 						  <option>4</option>
 						  <option>5</option>
 						</select>
@@ -103,11 +104,11 @@
 				</div>
 				<div class="row margin-top">
 					<label for="q7" class="col-sm-10 control-label">In a discussion, truth should be more important than people’s sensitivities.</label>
-					<div class="col-sm-2" id="q7">
-						<select class="form-control">
+					<div class="col-sm-2">
+						<select class="form-control" id="q7">
 						  <option>1</option>
 						  <option>2</option>
-						  <option>3</option>
+						  <option selected>3</option>
 						  <option>4</option>
 						  <option>5</option>
 						</select>
@@ -115,11 +116,11 @@
 				</div>
 				<div class="row margin-top">
 					<label for="q8" class="col-sm-10 control-label">You rarely get carried away by fantasies and ideas.</label>
-					<div class="col-sm-2" id="q8">
-						<select class="form-control">
+					<div class="col-sm-2">
+						<select class="form-control" id="q8">
 						  <option>1</option>
 						  <option>2</option>
-						  <option>3</option>
+						  <option selected>3</option>
 						  <option>4</option>
 						  <option>5</option>
 						</select>
@@ -127,11 +128,11 @@
 				</div>
 				<div class="row margin-top">
 					<label for="q9" class="col-sm-10 control-label">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
-					<div class="col-sm-2" id="q9">
-						<select class="form-control">
+					<div class="col-sm-2">
+						<select class="form-control" id="q9">
 						  <option>1</option>
 						  <option>2</option>
-						  <option>3</option>
+						  <option selected>3</option>
 						  <option>4</option>
 						  <option>5</option>
 						</select>
@@ -139,11 +140,11 @@
 				</div>
 				<div class="row margin-top">
 					<label for="q10" class="col-sm-10 control-label">You feel more energetic after spending time with a group of people.</label>
-					<div class="col-sm-2" id="q10">
-						<select class="form-control">
+					<div class="col-sm-2">
+						<select class="form-control" id="q10">
 						  <option>1</option>
 						  <option>2</option>
-						  <option>3</option>
+						  <option selected>3</option>
 						  <option>4</option>
 						  <option>5</option>
 						</select>
@@ -157,29 +158,4 @@
 
 	
 </body>
-<script>
-	$(document).ready(function() {
-    console.log( "ready!" );
- var newFriend;
- $('.submit').click(function(event){
- 	event.preventDefault();
- 	var total = 0;
- 	var avg = [$('#q1').val().trim(), $('#q2').val().trim(), $('#q3').val().trim(), $('#q4').val().trim(), $('#q5').val().trim(), $('#q6').val().trim(), $('#q7').val().trim(), $('#q8').val().trim(), $('#q9').val().trim(), $('#q10').val().trim(),];
- 		
-
-	 newFriend = {
-    		name: $('#name').val().trim(),
-    		photo: $('#photo').val().trim(),
-    	   	avg: avg
-	    },
-	  
-	
-	 console.log(newFriend);
-	 $.post("/new_friend", newFriend).done(function(data) {
-
-		});
- }); 
-  
-});
-</script>
 </html>
